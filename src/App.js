@@ -9,6 +9,7 @@ function App() {
         description="This is a sample description." 
         text="Additional text goes here." 
       />
+      
       <MyComponent 
         name="Another Name" 
         description="This is another description." 
@@ -25,9 +26,10 @@ function App() {
   )
 }
 
+
 const MyComponent = (props) => {
   return(
-    <div>
+    <div className="my-component">
       <h1>{props.name}</h1>
       <p>{props.description}</p>
       <span>{props.text}</span>
