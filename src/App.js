@@ -1,18 +1,27 @@
-import logo from './logo.svg';
+
 import './App.css';
 
 function App() {
-  const age = 20;
+  const classes = [
+    {name : "html", finished : true},
+    {name : "javascript", finished : false},
+    {name : "css", finished : true},
+    {name : "bootstrap", finished : true},
+    {name : "react", finished : false},
+  ];
 
   return (
     <div className="App">
-      {age >= 18 ? <h1> over </h1> : <h1> under </h1>}
-      {age === 20 && <h1>20years old</h1>}
-      <button type="submit" className={age >= 20 ? "success-message" : "unsuccess-message"}>Click Me!</button>
+      {classes.map((cls, index)=>{
+        return(
+          cls.finished && <h2 key={index}>{cls.name}</h2>
+        )
+      })}
     </div>
   )
 
-
-  
 }
+
+
 export default App;
+
